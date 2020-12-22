@@ -1,0 +1,30 @@
+# Analyzer Profile
+category = "lang"
+name = "Go"
+shortcode = "go"
+version = "0.6.14"
+description = "This is the official analyzer for the Go programming language. It detects issues covered by open-source tools like staticcheck, vet, revive, gocritic, and DeepSource's custom checkers."
+logo = "https://s3.us-east-1.amazonaws.com/prod-asgard-static/analyzer_logos/go.svg"
+documentation_url = "https://deepsource.io/docs/analyzer/go.html"
+discuss_url = "https://discuss.deepsource.io/tag/go"
+
+# Analyzer Execution Details
+analysis_command = "/app/marvin-go"
+autofix_command = "/app/autofix"
+trigger = "code"
+processors = ["source_code_load", "skip_cq"]
+
+# Analyzer Resources Details
+min_cpu_limit = 3000
+max_cpu_limit = 4800
+min_memory_limit = 4501
+max_memory_limit = 6501
+
+# Analyzer Params
+meta_schema_path = "/app/.deepsource/meta_schema.json"
+supported_files = "\\.go$"
+default_test_patterns = ["**/*_test.go"]
+metrics = ["DCV", "DDP", "IDP"]
+example_config = "/app/.deepsource/example_config.toml"
+issues_meta = "/app/.deepsource/issues_meta.json"
+star_issues = ["VET-V0021", "SCC-SA1027", "SCC-SA1006", "CRT-D0009", "SCC-S1009"]
