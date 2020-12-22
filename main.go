@@ -22,10 +22,10 @@ type analyzerTomlConfig struct {
 	AutofixCommand      string   `toml:"autofix_command"`
 	Trigger             string   `toml:"trigger"`
 	Processors          []string `toml:"processors"`
-	MINCPULimit         int      `toml:"min_cpu_limit"`
-	MAXCPULimit         int      `toml:"max_cpu_limit"`
-	MINMEMORYLimit      int      `toml:"min_memory_limit"`
-	MAXMEMORYLimit      int      `toml:"max_memory_limit"`
+	MinCPULimit         int      `toml:"min_cpu_limit"`
+	MaxCPULimit         int      `toml:"max_cpu_limit"`
+	MinMemoryLimit      int      `toml:"min_memory_limit"`
+	MaxMemoryLimit      int      `toml:"max_memory_limit"`
 	MetaSchemaPath      string   `toml:"meta_schema_path"`
 	SupportedFiles      string   `toml:"supported_files"`
 	DefaultTestPatterns []string `toml:"default_test_patterns"`
