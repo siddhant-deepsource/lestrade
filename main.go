@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"log"
+	"os"
+	"path"
 
 	"github.com/BurntSushi/toml"
 )
@@ -34,9 +36,8 @@ type analyzerTomlConfig struct {
 }
 
 func main() {
-	// githubWorkspacePath := os.Getenv("GITHUB_WORKSPACE")
-	// analyzerTomlPath := path.Join(githubWorkspacePath, "analyzer.toml")
-	analyzerTomlPath := "analyzer.toml"
+	githubWorkspacePath := os.Getenv("GITHUB_WORKSPACE")
+	analyzerTomlPath := path.Join(githubWorkspacePath, "analyzer.toml")
 	var config analyzerTomlConfig
 	if _, err := toml.DecodeFile(analyzerTomlPath, &config); err != nil {
 		fmt.Println(err)
