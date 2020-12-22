@@ -1,0 +1,10 @@
+# action.yml
+name: 'Lestrade: Validate Analyzer TOML File'
+description: 'Github action to validate the analyzer toml file of every analyzer.'
+author: 'Siddhant N Trivedi <siddhant@deepsource.io>'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'shield'
+  color: 'blue'
