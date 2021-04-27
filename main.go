@@ -43,6 +43,7 @@ func main() {
 		fmt.Println(err)
 		return
 	}
+	// hello world
 	log.Println("Analyzer TOML Parsed.")
 
 	// checking the category field
